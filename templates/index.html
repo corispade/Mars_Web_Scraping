@@ -10,30 +10,33 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
   </head>
+
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
+      <div class="jumbotron text-center" style="background-color: rgba(0, 0, 255, 0.7);">
+        <h1 style='color:white'>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="btn btn-danger btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
+
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
-              <p>{{ mars.news_paragraph }}</p>
+              <h2 style="text-align: center;">Latest Mars News</h2>
+              <h4 class="media-heading" style="text-align: center;">{{ mars.news_title }}</h4>
+              <p style="text-align: center;">{{ mars.news_paragraph }}</p>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
+          <h2 style="text-align: center;">Featured Mars Image</h2>
           <img
             src="{{ mars.featured_image }}"
             class="img-responsive"
@@ -43,8 +46,8 @@
         <div class="col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
-            <h4>Mars Facts</h4>
-            <table class ="table table-hover" {{ mars.facts | safe }}></table>
+            <h2 style="text-align: center;">Mars Facts</h2>
+            <table class ="table table-striped"{{ mars.facts | safe }}</table>
           </div>
         </div>
       </div>
@@ -54,7 +57,7 @@
       <!-- Section for Mars Hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="col-md-8">
-          <h4>Mars Hemispheres</h4>
+          <h2 style="text-align: center;">Mars Hemispheres</h2>
           {% for hemisphere in mars.hemispheres %}
           <div class="col-md-6">
               <img 
@@ -63,7 +66,7 @@
                 alt="Responsive image"
               />
               <div class="card-body">
-                  <p class="card-text">{{ hemisphere.title }}</p>
+                  <p class="card-text" style="text-align: center;"><strong>{{ hemisphere.title }}</strong></p>
               </div>
           </div>
           {% endfor %}
