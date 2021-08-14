@@ -46,32 +46,32 @@
             <h4>Mars Facts</h4>
             {{ mars.facts | safe }}
           </div>
+        </div>
+      </div>
 
 <!-- -------------------------------------------------- -->
 
-          <!-- Section for Mars Hemispheres -->
-          <div class="row" id="mars-hemispheres">
-            <div class="col-md-8">
-              <h4>Mars Hemispheres</h4>
-              {% for hemisphere in mars.hemispheres %}
-              <div class="col-md-6">
-                  <img 
-                    src="{{ hemisphere.img_url }}"
-                    class="img-responsive"
-                    alt="Responsive image"
-                  />
-                  <div class="card-body">
-                      <p class="card-text">{{ hemisphere.title }}</p>
-                  </div>
+      <!-- Section for Mars Hemispheres -->
+      <div class="row" id="mars-hemispheres">
+        <div class="col-md-8">
+          <h4>Mars Hemispheres</h4>
+          {% for hemisphere in mars.hemispheres %}
+          <div class="col-md-6">
+              <img 
+                src="{{ hemisphere.image_url }}"
+                class="img-responsive"
+                alt="Responsive image"
+              />
+              <div class="card-body">
+                  <p class="card-text">{{ hemisphere.title }}</p>
               </div>
-              {% endfor %}
-            </div>
-          </div> 
+          </div>
+          {% endfor %}
+        </div>
+      </div> 
 
 <!-- -------------------------------------------------- -->
           
-        </div>
-      </div>
     </div>
   </body>
 </html>
