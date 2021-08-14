@@ -2,13 +2,13 @@
 
 # Overview
 
-Utilizing BeautifulSoup and Splinter to scrape data from websites to retrieve news about Mars, spaces images from Mars, facts about Mars, and images of Mars hemispheres. We are storing the scraped data into a Mongo database and using a Flask web application to display the data. 
+Utilizing BeautifulSoup and Splinter to scrape data from websites to retrieve news about Mars, facts about Mars, space images from Mars, and images of Mars hemispheres. We are storing the scraped data into a Mongo database and using a Flask web application to display the data. 
 
 ## Process:
 
 ### Deliverable 1: Scrape Full-Resolution Mars Hemisphere Images and Titles
 
-1. Wrote code that retrieved full-resolution image and title from each Mars hemisphere
+1. Created a function that retrieved full-resolution image and title from each Mars hemisphere
 2. Added the full-resolution images and titles to a dictionary
 3. Created a list to hold the dictionary containing the above data
 
